@@ -27,8 +27,17 @@ def get_location(zip_code: str, country_code: str = None) -> list:
     return response.json()
 
 
-def get_weather_forecast(lat:str, lon: str, units: str = 'imperial') -> dict:
-
+def get_weather_forecast(lat:str = None, lon: str = None, units: str = 'imperial') -> dict:
+    """
+    Gets the weather forecast for the given coordinates
+    
+    Args:
+        lat (str) : latitude coordinates
+        lon (str):  longitude coordinates
+        units(str): Display type. Default is 'imperial' (Optional)
+    Returns:
+        Weather data (dict)
+    """
     url = f"{WEATHER_URL}?lat={lat}&lon={lon}&units={units}&appid={WEATHER_API_KEY}"
 
     response = requests.get(url, headers = HEADERS_JSON)

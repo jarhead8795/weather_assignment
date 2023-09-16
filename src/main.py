@@ -5,7 +5,7 @@ def main():
     lat = location_info.get('lat')
     lon = location_info.get('lon')
 
-    weather_info = weather_api.get_weather_forecast(lat, lon)
+    weather_info = weather_api.get_weather_forecast(lat=lat, lon=lon)
 
     print(f"{weather_info}")
 
