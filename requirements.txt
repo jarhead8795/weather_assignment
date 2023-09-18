@@ -1,0 +1,2 @@
+weather-api-assignment==0.0.1
+diagram-api-assignment==0.0.1
